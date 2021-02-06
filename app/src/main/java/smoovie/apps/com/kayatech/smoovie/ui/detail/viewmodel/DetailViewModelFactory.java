@@ -4,12 +4,10 @@ import android.arch.lifecycle.ViewModel;
 import android.arch.lifecycle.ViewModelProvider;
 import android.support.annotation.NonNull;
 
-import smoovie.apps.com.kayatech.smoovie.MoviesRepository;
+import jibin_mdb.apps.com.jibin.jibin_mdb.MoviesRepository;
+import jibin_mdb.apps.com.jibin.jibin_mdb.ui.detail.viewmodel.DetailViewModel;
 
-/**
- * Created By blackcoder
- * On 30/04/19
- **/
+
 public final class DetailViewModelFactory extends ViewModelProvider.NewInstanceFactory {
     private final MoviesRepository mRepository;
 

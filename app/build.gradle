@@ -1,10 +1,10 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion sdkVersion
+    compileSdkVersion 30
     defaultConfig {
-        applicationId "smoovie.apps.com.kayatech.smoovie"
-        minSdkVersion 22
+        applicationId "com.example.jibin_mdb"
+        minSdkVersion 21
         targetSdkVersion sdkVersion
         versionCode 1
         versionName "1.0"
@@ -15,10 +15,10 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            buildConfigField("String", "API_KEY", "\"${project.hasProperty("SMOOVIE_API_KEY") ? SMOOVIE_API_KEY : System.getenv("SMOOVIE_API_KEY")}\"")
+            buildConfigField("String", "API_KEY", "\"${project.hasProperty("065201f20ca58e5e6c242e02f9f84a0d") ? SMOOVIE_API_KEY : System.getenv("065201f20ca58e5e6c242e02f9f84a0d")}\"")
         }
         debug {
-            buildConfigField("String", "API_KEY", "\"${project.hasProperty("SMOOVIE_API_KEY") ? SMOOVIE_API_KEY : System.getenv("SMOOVIE_API_KEY")}\"")
+            buildConfigField("String", "API_KEY", "\"${project.hasProperty("065201f20ca58e5e6c242e02f9f84a0d") ? SMOOVIE_API_KEY : System.getenv("065201f20ca58e5e6c242e02f9f84a0d")}\"")
         }
     }
 }
@@ -41,6 +41,7 @@ dependencies {
     implementation architecture_component.extensions
     implementation architecture_component.room
     implementation architecture_component.paging
+    implementation 'org.jetbrains:annotations-java5:15.0'
     annotationProcessor architecture_component.room_compiler
     annotationProcessor architecture_component.lifecycle_compiler
 
@@ -56,8 +57,8 @@ dependencies {
     implementation squareup.retrofit2
     implementation squareup.okhttp3
     implementation squareup.gson_converter
-    debugImplementation squareup.leakcanary_debug
-    releaseImplementation squareup.leakcanary_release
+//    debugImplementation squareup.leakcanary_debug
+//    releaseImplementation squareup.leakcanary_release
 
 //    Testing Lib
     testImplementation 'junit:junit:4.12'

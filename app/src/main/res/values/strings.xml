@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">Smoovie</string>
+    <string name="app_name" translatable="false">JIBIN_MDB</string>
 
     <!--Main Menu Sort By-->
     <string name="action_sort_most_popular">Most Popular</string>

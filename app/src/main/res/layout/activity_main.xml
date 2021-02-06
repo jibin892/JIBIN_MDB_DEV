@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/coordinator_main"
     android:layout_width="match_parent"
+    android:background="@color/white"
     android:layout_height="match_parent"
-    tools:context=".ui.main.MainActivity">
+    tools:context="jibin_mdb.apps.com.jibin.jibin_mdb.MainActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -16,6 +17,7 @@
             android:id="@+id/toolbar_main"
             android:layout_width="match_parent"
             android:layout_height="?actionBarSize"
+            android:background="@color/cblue1"
             app:layout_collapseMode="pin"
             app:titleTextColor="@color/colorWhite" />
 
@@ -26,7 +28,12 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBehavior">
-
+<android.support.v7.widget.CardView
+    android:layout_width="match_parent"
+app:cardCornerRadius="4dp"
+    android:layout_marginTop="2dp"
+    android:padding="2dp"
+    android:layout_height="wrap_content">
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recycler_view_movies"
             android:layout_width="match_parent"
@@ -34,11 +41,11 @@
             android:clipToPadding="false"
             android:layoutAnimation="@anim/layout_animation_main"
             android:scrollbars="vertical" />
-
+</android.support.v7.widget.CardView>
         <ProgressBar
             android:id="@+id/progressbar_movies_loading"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="37dp"
             android:layout_gravity="center" />
 
         <TextView
@@ -46,6 +53,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+
             android:layout_margin="8dp"
             android:text="@string/error_network_message"
             android:textAlignment="center"

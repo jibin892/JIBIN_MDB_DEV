@@ -4,19 +4,16 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 
-import smoovie.apps.com.kayatech.smoovie.MoviesRepository;
+import jibin_mdb.apps.com.jibin.jibin_mdb.MovieDatabase;
+import jibin_mdb.apps.com.jibin.jibin_mdb.MoviesRepository;
 import smoovie.apps.com.kayatech.smoovie.R;
-import smoovie.apps.com.kayatech.smoovie.db.MovieDatabase;
 import smoovie.apps.com.kayatech.smoovie.network.MovieApiServices;
 import smoovie.apps.com.kayatech.smoovie.network.NetworkAdapter;
 import smoovie.apps.com.kayatech.smoovie.ui.detail.viewmodel.DetailViewModelFactory;
 import smoovie.apps.com.kayatech.smoovie.ui.main.viewmodel.MainViewModelFactory;
 import smoovie.apps.com.kayatech.smoovie.util.threads.AppExecutors;
 
-/**
- * Created By blackcoder
- * On 30/04/19
- **/
+
 public final class InjectorUtils {
 
     private static MoviesRepository provideRepository(Context context, SharedPreferences.OnSharedPreferenceChangeListener changeListener) {
